@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class Exception_handling {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         try {
             int n1, n2;
             int result;
-            Scanner sc = new Scanner(System.in);
+
             System.out.println("enter n1");
             System.out.println("enter n2");
             n1 = sc.nextInt();
@@ -23,6 +24,10 @@ public class Exception_handling {
 
         } catch (Exception e) {
             System.out.println("invalid input");
+        } finally {
+            sc.close();
+            System.out.println("end of code");
+
         }
     }
 }
